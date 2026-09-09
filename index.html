@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>Redemption — HYROX Cycle</title>
+<meta name="description" content="Training, nutrition and recovery for the HYROX Redemption Cycle, Sep 8 – Nov 1, 2026.">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#F6F1E7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Redemption">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ============================= TODAY ============================= -->
+  <section id="view-today" class="view">
+    <div class="page" id="today-page"></div>
+  </section>
+
+  <!-- ============================= PLAN ============================= -->
+  <section id="view-plan" class="view">
+    <div class="page" id="plan-page"></div>
+  </section>
+
+  <!-- ============================= FUEL ============================= -->
+  <section id="view-fuel" class="view">
+    <div class="page" id="fuel-page"></div>
+  </section>
+
+  <!-- ============================= PROGRESS ============================= -->
+  <section id="view-progress" class="view">
+    <div class="page" id="progress-page"></div>
+  </section>
+
+  <!-- ============================= BOTTOM NAV ============================= -->
+  <nav class="bottom-nav">
+    <div class="bottom-nav-inner">
+      <button class="nav-btn" data-nav="today">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1l2.1-2.1M17 7l2.1-2.1"/></svg>
+        <span>Today</span>
+      </button>
+      <button class="nav-btn" data-nav="plan">
+        <svg viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="16" rx="3"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg>
+        <span>Plan</span>
+      </button>
+      <button class="nav-btn" data-nav="fuel">
+        <svg viewBox="0 0 24 24"><path d="M6 2.5v6.2a3 3 0 0 0 1 2.24V21.5M6 2.5v8.44M9 2.5v6.2a3 3 0 0 1-1 2.24M18 2.5c-2 1.6-2 3.4-2 5.5 0 2 0 3.5 2 4.2V21.5"/></svg>
+        <span>Fuel</span>
+      </button>
+      <button class="nav-btn" data-nav="progress">
+        <svg viewBox="0 0 24 24"><path d="M4 20V10M11 20V4M18 20v-7"/></svg>
+        <span>Progress</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================= SHEETS / MODALS ============================= -->
+  <div class="sheet-backdrop" id="sheet-backdrop"></div>
+  <div class="sheet" id="swap-sheet"></div>
+  <div class="sheet" id="sos-sheet"></div>
+
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-panel" id="day-modal"></div>
+  <div class="modal-panel" id="log-modal"></div>
+  <div class="modal-panel confirm-modal" id="confirm-modal"></div>
+  <div class="modal-panel" id="checkin-modal"></div>
+  <div class="modal-panel" id="supp-modal"></div>
+
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
